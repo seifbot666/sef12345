@@ -1094,25 +1094,25 @@ const reactionMessage = {
                 const timestampe = speed();
 const latensie = speed() - timestampe
                 const menulist = `┌─❖
-│「 Hi 👋 」
+│「 هاي 👋 」
 └┬❖ 「 ${pushname} 」
-┌┤✑  How Are You? 😄
+┌┤✑  كيف حالك? 😄
 │└────────────┈ ⳹
 │
-└─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
-│𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
-│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+└─「 معلومات البوت 」       
+│السرعه : ${latensie.toFixed(4)} miliseconds
+│مدة العرض : ${runtime(process.uptime())}
+│اسم البوت : ${global.botname}
+│اسم المالك : ${global.ownername}
+│المالك : ${global.owner}
+│اسم المضيف : ${os.hostname()}
+│برنامج : ${os.platform()}
+│إجمالي المستخدم : ${Object.keys(global.db.data.users).length}
+│مجموع الضربات : ${jumlahcmd}
+│مجموع ضرب اليوم : ${jumlahharian}
 └┬────────────┈ ⳹
-   │✑  Please Select
-   │✑  The Button Below
+   │✑  الرجاء التحديد
+   │✑  الزر أدناه
    └─────────────┈ ⳹`
    
    //randoming function
@@ -1168,7 +1168,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nThe bot has been disabled in this group, now no one will able to use the bot in this group!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nTتم تعطيل الروبوت في هذه المجموعة ، والآن لن يتمكن أحد من استخدام الروبوت في هذه المجموعة!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!isBanChat) return replay('Already Unbanned')
 let off = banchat.indexOf(from)
@@ -1234,7 +1234,7 @@ if (q.includes('--help')) return reply(examkosong)
      teksehmazeh += `*🐄Cow* : ${getSapi(m.sender)}\n`
      teksehmazeh += `*🐘Elephant* : ${getGajah(m.sender)}\n\n`
      teksehmazeh += `_*${pushname}*_`
-     await XeonBotInc.send5ButImg(from, `` + '' + teksehmazeh, `© ${botname}`, XeonBotInc, [{"urlButton": {"displayText": "YouTube📍","url": `${websitex}`}}])
+     await XeonBotInc.send5ButImg(from, `` + '' + teksehmazeh, `© ${botname}`, XeonBotInc, [{"urlButton": {"displayText": "يوتيوب📍","url": `${websitex}`}}])
   }
   break
         case 'userlimit': 
@@ -2287,7 +2287,7 @@ if (isBanChat) return reply(mess.banChat)
           reply(`Exif Has Been Successfully Changed to\n\n${themeemoji} Packname : ${global.packname}\n${themeemoji} Author : ${global.author}`)
             }
             break
-	case 'kick': {
+	case 'طرد': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2297,7 +2297,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'add': {
+	case 'اضافه': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2307,7 +2307,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'promote': {
+	case 'رفع': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2317,7 +2317,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'demote': {
+	case 'تنزيل': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2327,7 +2327,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'block': {
+        case 'بلوك': {
         	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!isCreator) return replay(`${mess.owner}`)
@@ -2335,7 +2335,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'unblock': {
+        case 'فك بلوك': {
         	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!isCreator) return replay(`${mess.owner}`)
@@ -2388,15 +2388,15 @@ if (isBanChat) return reply(mess.banChat)
                 reply(mess.success)
                 }
                 break
-            case 'tagall': {
+            case 'تاك': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝ 
+let teks = `╚»˙·٠•●♥ تاك للكل ♥●•٠·˙«╝ 
  
- ➲ *Message : ${q ? q : 'no message'}*\n\n`
+ ➲ *الرساله : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
                 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
                 }
@@ -2619,7 +2619,7 @@ if (isBanChat) return reply(mess.banChat)
              }
             }
             break
-            case 'editinfo': {
+            case 'تعديل': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -2693,7 +2693,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the group link in this group or u will be kicked immediately`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط المجموعة في هذه المجموعة وإلا فسيتم طردك على الفور`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLink) return replay('Already deactivated')
 let off = ntilink.indexOf(from)
@@ -2724,16 +2724,16 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the youtube video link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط فيديو يوتيوب في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkYoutubeVid) return replay('Already deactivated')
 let off = ntilinkytvid.indexOf(from)
 ntilinkytvid.splice(off, 1)
-replay('Success in turning off youtube video antilink in this group')
+replay('النجاح في تشغيل يوتيوب antilink في هذه المجموعة')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -2755,16 +2755,16 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the youtube channel link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط قناة يوتيوب في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkYoutubeChannel) return replay('Already deactivated')
 let off = ntilinkytch.indexOf(from)
 ntilinkytch.splice(off, 1)
-replay('Success in turning off youtube channel antilink in this group')
+replay('النجاح في ايقاف يوتيوب antilink في هذه المجموعة')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -2779,23 +2779,23 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (AntiLinkInstagram) return replay('Already activated')
 ntilinkig.push(from)
-replay('Success in turning on instagram antilink in this group')
+replay('النجاح في تشغيل انستجرام antilink في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the instagram link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط انستجرام في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkInstagram) return replay('Already deactivated')
 let off = ntilinkig.indexOf(from)
 ntilinkig.splice(off, 1)
-replay('Success in turning off instagram antilink in this group')
+replay('النجاح في إيقاف antilink انستجرام في هذه المجموعة')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -2810,23 +2810,23 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (AntiLinkFacebook) return replay('Already activated')
 ntilinkfb.push(from)
-replay('Success in turning on facebook antilink in this group')
+replay('النجاح في تشغيل مضاد الارتباط على فيسبوك في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the facebook link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط فيسبوك في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkFacebook) return replay('Already deactivated')
 let off = ntilinkfb.indexOf(from)
 ntilinkfb.splice(off, 1)
-replay('Success in turning off facebook antilink in this group')
+replay('النجاح في إيقاف تشغيل مضاد الارتباط على فيسبوك في هذه المجموعة')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -2841,23 +2841,23 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (AntiLinkTelegram) return replay('Already activated')
 ntilinktg.push(from)
-replay('Success in turning on telegram antilink in this group')
+replay('النجاح في تشغيل تليجرام antilink في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the telegram link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط تليجرام في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkTelegram) return replay('Already deactivated')
 let off = ntilinkig.indexOf(from)
 ntilinkig.splice(off, 1)
-replay('Success in turning off telegram antilink in this group')
+replay('النجاح في إيقاف تشغيل تليجرام مضاد الروابط في هذه المجموعة')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -2872,14 +2872,14 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (AntiLinkTiktok) return replay('Already activated')
 ntilinktt.push(from)
-replay('Success in turning on tiktok antilink in this group')
+replay('النجاح في تشغيل مضاد الارتباط تيكتوك في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the tiktok link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل رابط تيكتوك في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkTiktok) return replay('Already deactivated')
 let off = ntilinktt.indexOf(from)
@@ -2887,8 +2887,8 @@ ntilinktt.splice(off, 1)
 replay('Success in turning off tiktok antilink in this group')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -2910,22 +2910,22 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the twitter link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nنجح تشغيل منع روابط تويتر في هذه المجموعه!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkTwitter) return replay('Already deactivated')
 let off = ntilinktwt.indexOf(from)
 ntilinktwt.splice(off, 1)
-replay('Success in turning off twitter antilink in this group')
+replay('النجاح في إيقاف موقع تويتر antilink في هذه المجموعة')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
   }
   break
-              case 'antilinkall': {
+              case 'الروابط': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
@@ -2934,23 +2934,23 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (AntiLinkTwitter) return replay('Already activated')
 ntilinkall.push(from)
-replay('Success in turning on all antilink in this group')
+replay('النجاح في تشغيل جميع مضادات الروابط في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send any link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nإذا لم تكن مسؤولاً ، فلا ترسل أي رابط في هذه المجموعة وإلا فسيتم طردك على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkAll) return replay('Already deactivated')
 let off = ntilinkall.indexOf(from)
 ntilinkall.splice(off, 1)
-replay('Success in turning off all antilink in this group')
+replay('النجاح في إيقاف تشغيل جميع مضادات الروابط في هذه المجموعة')
 } else {
   let buttonsntilink = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -2972,16 +2972,16 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNo body is allowed to send virus in this group, member who send will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nلا يسمح لأي شخص بإرسال فيروس في هذه المجموعة ، سيتم طرد العضو الذي يرسل الفيروس على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!antiVirtex) return replay('Already deactivated')
 let off = ntvirtex.indexOf(from)
 ntvirtex.splice(off, 1)
-replay('Success in turning off antivirus this group')
+replay('النجاح في إيقاف مكافحة الفيروسات هذه المجموعة')
 } else {
   let buttonsntvirtex = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntvirtex, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -2996,16 +2996,16 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (Autoreply) return replay('Already activated')
 autorep.push(from)
-replay('Success in turning on the autoreply in this group')
+replay('النجاح في تشغيل الرد التلقائي في هذه المجموعة')
 } else if (args[0] === "off") {
 if (!Autoreply) return replay('Already deactivated')
 let off = autorep.indexOf(from)
 autorep.splice(off, 1)
-replay('Success in turning off autoreply in this group')
+replay('النجاح في إيقاف تشغيل الرد التلقائي في هذه المجموعة')
 } else {
   let buttonswlcm = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonswlcm, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -3020,23 +3020,23 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (antiToxic) return replay('Already activated')
 nttoxic.push(from)
-replay('Success in turning on antitoxic in this group')
+replay('النجاح في تشغيل مضاد السموم في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNobody is allowed to use bad words in this group, one who uses will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nلا يُسمح لأحد باستخدام كلمات سيئة في هذه المجموعة ، ومن يستخدمها سيتم طرده على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!antiToxic) return replay('Already deactivated')
 let off = nttoxic.indexOf(from)
 nttoxic.splice(off, 1)
-replay('Success in turning off antitoxic in this group')
+replay('النجاح في إيقاف مضادات السموم في هذه المجموعة')
 } else {
   let buttonsnttoxci = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsnttoxic, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -3051,23 +3051,23 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (antiWame) return replay('Already activated')
 ntwame.push(from)
-replay('Success in turning on antiwame in this group')
+replay('النجاح في تشغيل مناهضة المرأة في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNobody is allowed to send wa.me in this group, one who sends will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nلا أحد مسموح له بإرسال wa.me في هذه المجموعة ، الشخص الذي يرسل سيتم طرده على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!antiWame) return replay('Already deactivated')
 let off = nttoxic.indexOf(from)
 ntwame.splice(off, 1)
-replay('Success in turning off antiwame in this group')
+replay('النجاح في إيقاف مضاد للورم في هذه المجموعة')
 } else {
   let buttonsntwame = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntwame, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -3082,23 +3082,23 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (AntiNsfw) return replay('Already activated')
 ntnsfw.push(from)
-replay('Success in turning on nsfw in this group')
+replay('النجاح في تشغيل nsfw في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) feature has been enabled in this group, which means one can access sexual graphics from the bot!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nتم تمكين ميزة Nsfw (ليست آمنة للعمل) في هذه المجموعة ، مما يعني أنه يمكن للمرء الوصول إلى الرسومات الجنسية من الروبوت!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiNsfw) return replay('Already deactivated')
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
-replay('Success in turning off nsfw in this group')
+replay('النجاح في إيقاف تشغيل nsfw في هذه المجموعة')
 } else {
   let buttonsntnsfw = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  { buttonId: `${command} on`, buttonText: { displayText: 'فتح' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'قفل' }, type: 1 }
   ]
   await XeonBotInc.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
   }
@@ -3120,8 +3120,8 @@ if (isBanChat) return reply(mess.banChat)
                 reply(`${XeonBotInc.user.name} Has Been Unmuted In This Group!`)
                 } else {
                  let buttons = [
-                        { buttonId: 'mute on', buttonText: { displayText: 'On' }, type: 1 },
-                        { buttonId: 'mute off', buttonText: { displayText: 'Off' }, type: 1 }
+                        { buttonId: 'mute on', buttonText: { displayText: 'فتح' }, type: 1 },
+                        { buttonId: 'mute off', buttonText: { displayText: 'قفل' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `Mute Bot`, XeonBotInc.user.name, m)
                 }
@@ -3139,7 +3139,7 @@ await XeonBotInc.updateProfilePicture(botNumber, { url: media }).catch((err) => 
 replay(mess.success)
 }
 break
-            case 'linkgroup': case 'linkgc': case 'gclink': case 'grouplink': {
+            case 'linkgroup': case 'linkgc': case 'gclink': case 'لينك': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -3224,27 +3224,27 @@ for (let i of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: 'YouTube 🍓',
+displayText: 'شاتي 🍓',
 url: `${global.websitex}`
 }
 }, {
 urlButton: {
-displayText: 'Script 🍜',
+displayText: 'سكربت 🍜',
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
+displayText: 'حاله البوت 🚀',
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
+displayText: 'القائمه 🐰',
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'المطور 😈',
 id: 'owner'
 }
 }]
@@ -3265,27 +3265,27 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: 'YouTube 🍓',
+displayText: 'شاتي 🍓',
 url: `${global.websitex}`
 }
 }, {
 urlButton: {
-displayText: 'Script 🍜',
+displayText: 'سكربت 🍜',
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
+displayText: 'حاله البوت 🚀',
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
+displayText: 'القائمه 🐰',
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'المطور 😈',
 id: 'owner'
 }
 }]
@@ -3307,27 +3307,27 @@ if (!isCreator) return replay(mess.owner)
                     await sleep(1500)
                     let butoon = [{
                                 urlButton: {
-                                displayText: 'YouTube 🍓',
+                                displayText: 'شاتي 🍓',
 url: `${global.websitex}`
                                 }
                             }, {
 urlButton: {
-displayText: 'Script 🍜',
+displayText: 'سكربت 🍜',
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
+displayText: 'حاله البوت 🚀',
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
+displayText: 'القائمه 🐰',
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'المطور 😈',
 id: 'owner'
 }
 }]
@@ -3534,7 +3534,7 @@ reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Sec
 }
 }
 break
-case 'swm': case 'take': case 'stickerwm': {
+case 'swm': case 'سرقه': case 'stickerwm': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args.join(" ")) return reply(`Example :\nswm ${global.author}|${global.packname}`)
@@ -3626,7 +3626,7 @@ case 'tickle':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonssMessages = {
        image: {url:waifudd.data.url},
@@ -3698,7 +3698,7 @@ if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)       
  let trapbot = [
-    {buttonId: `trap`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    {buttonId: `trap`, buttonText: {displayText: `التالي ⚡`}, type: 1},
     ]
   let button2Messages = {
    image: {url:waifudd.data.url},
@@ -3718,7 +3718,7 @@ if (!m.isGroup) return replay(mess.group)
 if (!AntiNsfw) return reply(mess.nsfw)
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
  let hnekobot = [
-    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    {buttonId: `.hneko`, buttonText: {displayText: `التالي ⚡`}, type: 1},
     ]
   let button3Messages = {
    image: {url:waifudd.data.url},
@@ -3739,7 +3739,7 @@ if (!AntiNsfw) return reply(mess.nsfw)
 reply(mess.wait)
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
  let nwaifubot = [
-    {buttonId: `.hneko`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    {buttonId: `.hneko`, buttonText: {displayText: `التالي ⚡`}, type: 1},
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
@@ -3758,7 +3758,7 @@ case 'gasm':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonsssMessages = {
        image: {url:waifudd.data.url},
@@ -3777,7 +3777,7 @@ case 'smug2':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/smug`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let button1ssMessages = {
        image: {url:waifudd.data.url},
@@ -3796,7 +3796,7 @@ case 'foxgirl':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/fox_girl`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let button12ssMessages = {
        image: {url:waifudd.data.url},
@@ -3815,7 +3815,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
     waifudd = await axios.get(`https://waifu.pics/api/sfw/nom`)
  let xxhnekobot = [
-    {buttonId: `.nom`, buttonText: {displayText: `Next ⚡`}, type: 1},
+    {buttonId: `.nom`, buttonText: {displayText: `التالي ⚡`}, type: 1},
     ]
   let xx1button3Messages = {
    image: {url:waifudd.data.url},
@@ -3833,7 +3833,7 @@ case 'waifu3':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/waifu`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let button112ssMessages = {
        image: {url:waifudd.data.url},
@@ -3852,7 +3852,7 @@ case 'neko2':
 reply(mess.wait)						
    waifud = await axios.get('https://waifu.pics/api/sfw/neko')
                 var wbutsss = [
-        {buttonId: `.neko`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.neko`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonssMessage = {
        image: {url:waifud.data.url},
@@ -3871,7 +3871,7 @@ case 'animecuddle':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/cuddle`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonsosMessages = {
        image: {url:waifudd.data.url},
@@ -3890,7 +3890,7 @@ case 'animeslap':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/slap`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let btutttonssMessages = {
        image: {url:waifudd.data.url},
@@ -3909,7 +3909,7 @@ case 'animepat':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/pat`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let xxbuttonssMessages = {
        image: {url:waifudd.data.url},
@@ -3928,7 +3928,7 @@ case 'animeneko':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/neko`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonsTsMessages = {
        image: {url:waifudd.data.url},
@@ -3947,7 +3947,7 @@ case 'animehug':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/hug`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonussMessages = {
        image: {url:waifudd.data.url},
@@ -3966,7 +3966,7 @@ case 'animekiss':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/kiss`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let bxxuttonssMessages = {
        image: {url:waifudd.data.url},
@@ -3985,7 +3985,7 @@ case 'animewlp':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/wallpaper`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttoxnssMessages = {
        image: {url:waifudd.data.url},
@@ -4004,7 +4004,7 @@ case 'animespank':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/spank`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonssxMessages = {
        image: {url:waifudd.data.url},
@@ -4023,7 +4023,7 @@ case 'animecry':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/cry`)
                            var wbutt1sss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let button1ssxMessages = {
        image: {url:waifudd.data.url},
@@ -4042,7 +4042,7 @@ case 'animekill':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/kill`)
                            var wbuttszzss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsxMessages = {
        image: {url:waifudd.data.url},
@@ -4061,7 +4061,7 @@ case 'animelick':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/lick`)
                            var wbuttszz12ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx12Messages = {
        image: {url:waifudd.data.url},
@@ -4080,7 +4080,7 @@ case 'animebite':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/bite`)
                            var wbuttszz123ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx123Messages = {
        image: {url:waifudd.data.url},
@@ -4099,7 +4099,7 @@ case 'animeyeet':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/yeet`)
                            var wbuttszz124ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx124Messages = {
        image: {url:waifudd.data.url},
@@ -4118,7 +4118,7 @@ case 'animebully':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/lick`)
                            var wbuttszz125ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx125Messages = {
        image: {url:waifudd.data.url},
@@ -4137,7 +4137,7 @@ case 'animebonk':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/bonk`)
                            var wbuttszz126ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx126Messages = {
        image: {url:waifudd.data.url},
@@ -4156,7 +4156,7 @@ case 'animewink':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/wink`)
                            var wbuttszz127ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx127Messages = {
        image: {url:waifudd.data.url},
@@ -4175,7 +4175,7 @@ case 'animepoke':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/poke`)
                            var wbuttszz128ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التاليt ✨`}, type: 1},
         ]
       let buttonszzsx128Messages = {
        image: {url:waifudd.data.url},
@@ -4194,7 +4194,7 @@ case 'animesmile':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/smile`)
                            var wbuttszz129ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx129Messages = {
        image: {url:waifudd.data.url},
@@ -4213,7 +4213,7 @@ case 'animewave':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/wave`)
                            var wbuttszz1210ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1210Messages = {
        image: {url:waifudd.data.url},
@@ -4232,7 +4232,7 @@ case 'animeawoo':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/awoo`)
                            var wbuttszz1211ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1211Messages = {
        image: {url:waifudd.data.url},
@@ -4251,7 +4251,7 @@ case 'animeblush':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/blush`)
                            var wbuttszz1212ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1212Messages = {
        image: {url:waifudd.data.url},
@@ -4270,7 +4270,7 @@ case 'animesmug':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/smug`)
                            var wbuttszz1213ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1213Messages = {
        image: {url:waifudd.data.url},
@@ -4289,7 +4289,7 @@ case 'animeglomp':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/glomp`)
                            var wbuttszz1214ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1214Messages = {
        image: {url:waifudd.data.url},
@@ -4308,7 +4308,7 @@ case 'animehappy':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/happy`)
                            var wbuttszz1215ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1215Messages = {
        image: {url:waifudd.data.url},
@@ -4327,7 +4327,7 @@ case 'animedance':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/dance`)
                            var wbuttszz1216ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1216Messages = {
        image: {url:waifudd.data.url},
@@ -4346,7 +4346,7 @@ case 'animecringe':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/cringe`)
                            var wbuttszz1217ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1217Messages = {
        image: {url:waifudd.data.url},
@@ -4365,7 +4365,7 @@ case 'animehighfive':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/highfive`)
                            var wbuttszz1218ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1218Messages = {
        image: {url:waifudd.data.url},
@@ -4384,7 +4384,7 @@ case 'animehandhold':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/handhold`)
                            var wbuttszz1219ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1219Messages = {
        image: {url:waifudd.data.url},
@@ -4403,7 +4403,7 @@ case 'animemegumin':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/megumin`)
                            var wbuttszz1220ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
         ]
       let buttonszzsx1220Messages = {
        image: {url:waifudd.data.url},
@@ -4422,7 +4422,7 @@ case 'shinobu2':
 reply(mess.wait)						
                     ud = await axios.get('https://waifu.pics/api/sfw/shinobu')
 var wbutsss = [
-    {buttonId: `.shinobu`, buttonText: {displayText: `Next ✨`}, type: 1},
+    {buttonId: `.shinobu`, buttonText: {displayText: `التالي ✨`}, type: 1},
          ]
       let buttonsesMessage = {
       image: {url:ud.data.url},
@@ -4441,7 +4441,7 @@ case 'megumin2':
 reply(mess.wait)						
                     ud = await axios.get('https://waifu.pics/api/sfw/megumin')
 var wbutsss = [
-    {buttonId: `.megumin`, buttonText: {displayText: `Next ✨`}, type: 1},
+    {buttonId: `.megumin`, buttonText: {displayText: `التالي ✨`}, type: 1},
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
@@ -4460,7 +4460,7 @@ case 'awoo2':
 reply(mess.wait)						
  waifudd = await axios.get(`https://waifu.pics/api/sfw/awoo`)
  var wbuttsss = [
-    {buttonId: `.${command}`, buttonText: {displayText: `Next ✨`}, type: 1},
+    {buttonId: `.${command}`, buttonText: {displayText: `التالي ✨`}, type: 1},
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
@@ -4487,7 +4487,7 @@ const wall = new AnimeWallpaper();
             .catch(() => null);
 const i = Math.floor(Math.random() * wallpaper.length);
 var walb = [
-        {buttonId: `.${command} ${q}`, buttonText: {displayText: `Next ✨`}, type: 1},        
+        {buttonId: `.${command} ${q}`, buttonText: {displayText: `التالي ✨`}, type: 1},        
         ]
       let wal = {
        image: {url:wallpaper[i].image},
@@ -4524,7 +4524,7 @@ case 'naruto':
 				reply(mess.wait)
 			    var query = ["naruto hd","naruto boruto","naruto sasuke", "naruto aesthetic", "naruto aesthetic"]
                 var data = await pinterest(pickRandom(query))
-				var but = [{buttonId: `naruto`, buttonText: { displayText: "Next➡️" }, type: 1 }]
+				var but = [{buttonId: `naruto`, buttonText: { displayText: "التالي➡️" }, type: 1 }]
 				XeonBotInc.sendMessage(from, { caption: `Here you go!`, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
  			    break
 case 'yaoi':
@@ -4533,7 +4533,7 @@ case 'yaoi':
 				reply(mess.wait)
 			    var query = ["yaoi","yaoi aesthetic","yaoi hd","yaoi ganteng"]
                 var data = await pinterest(pickRandom(query))
-				var but = [{buttonId: `${command}`, buttonText: { displayText: "Next➡️" }, type: 1 }]
+				var but = [{buttonId: `${command}`, buttonText: { displayText: "التالي➡️" }, type: 1 }]
 				XeonBotInc.sendMessage(from, { caption: "Here you go!", image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
  			    break
 case 'coffee': case 'kopi': {
@@ -6067,7 +6067,7 @@ let audio = await toPTT(media, 'mp4')
 XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
 }
 break
-case 'togif': {
+case 'متحركه': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) return reply('Reply Image')
@@ -6442,7 +6442,7 @@ case 'twddlxx': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu 🐥'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'القائمه 🐥'}, type: 1}
 ]
 let buttonMessage = {
 video: {url:args[0]},
@@ -6539,7 +6539,7 @@ case 'fbddlxx': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu 🐥'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'القائمه 🐥'}, type: 1}
 ]
 let buttonMessage = {
 video: {url:args[0]},
@@ -6802,7 +6802,7 @@ if (isBanChat) return reply(mess.banChat)
                     var but = [
 				{
 					"urlButton": {
-						"displayText": "Watch🎥",
+						"displayText": "مشاهده🎥",
 						"url": `${websitex}`
 						}
 					}
@@ -6829,7 +6829,7 @@ if (isBanChat) return reply(mess.banChat)
                     var but = [
 				{
 					"urlButton": {
-						"displayText": "YouTube📍",
+						"displayText": "يوتيوب📍",
 						"url": `${websitex}`
 						}
 					}
@@ -6855,7 +6855,7 @@ if (isBanChat) return reply(mess.banChat)
                     var but = [
 				{
 					"urlButton": {
-						"displayText": "YouTube📍",
+						"displayText": "يوتيوب📍",
 						"url": `${websitex}`
 						}
 					}
@@ -7004,9 +7004,9 @@ if (isBan) return reply(mess.ban)
 if (!q) return reply(`What film you wanna search?\nExample: ${prefix}film Spiderman`)
 xeonkey.Film(q)
     .then(data => {console.log(data)
-    let krl = `*❒「  Film ${q} 」*\n*🌿 Author* : ${data[0].author}\n\n`
+    let krl = `*❒「  Film ${q} 」*\n*🌿 مؤلف* : ${data[0].author}\n\n`
 			    for (let i of data) {
-                krl += (`\n────────────────────\n\n *📍Title :* ${i.judul}\n *📟 Quality :* ${i.quality}\n *🖥️ Type : ${i.type}*\n *⌛ Uploaded :* ${i.upload}\n *🌍 Source :* ${i.link}`)
+                krl += (`\n────────────────────\n\n *📍عنوان :* ${i.judul}\n *📟 الجوده :* ${i.quality}\n *🖥️ Type : ${i.type}*\n *⌛ Uploaded :* ${i.upload}\n *🌍 مصدر :* ${i.link}`)
                 }
                XeonBotInc.sendMessage(from, { image: { url: data[0].thumb}, caption: krl }, { quoted: fdocs })
 });
@@ -7058,7 +7058,7 @@ for (let i of res) {
 teks += `\n\nName : ${i.name}\nCategory : ${i.category}\nDate : ${i.date}\nDesc : ${i.desc}\nLink : ${i.link}`
 }
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu🥀'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'القائمه🥀'}, type: 1}
 ]
 let buttonMessage = {
 image: log0,
@@ -7083,7 +7083,7 @@ teks += `\n\n${i.name}\n`
 teks += `${i.link}`
 }
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu🥀'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'القائمه🥀'}, type: 1}
 ]
 let buttonMessage = {
 image: {url:res[0].icon},
@@ -7110,7 +7110,7 @@ teks += `${i.link}\n`
 teks += `${i.nama}`
 }
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu🥀'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'القائمه🥀'}, type: 1}
 ]
 let buttonMessage = {
 image: log0,
@@ -7134,7 +7134,7 @@ for (let i of res) {
 teks += `${themeemoji} Server To ${no++}\nip : ${i.ip}\nport : ${i.port}\nversi : ${i.versi}\nplayer : ${i.player}\n\n`
 }
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu🥀'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'القائمه🥀'}, type: 1}
 ]
 let buttonMessage = {
 image: log0,
@@ -7601,7 +7601,7 @@ break
                 anu = await wikimedia(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
                 let buttons = [
-                    {buttonId: `wikimedia ${text}`, buttonText: {displayText: '➡️Next Image➡️'}, type: 1}
+                    {buttonId: `wikimedia ${text}`, buttonText: {displayText: '➡️الصوره التاليه➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: result.image },
@@ -7620,7 +7620,7 @@ break
                 let anu = await quotesAnime()
                 result = anu[Math.floor(Math.random() * anu.length)]
                 let buttons = [
-                    {buttonId: `quotesanime`, buttonText: {displayText: '➡️Next➡️'}, type: 1}
+                    {buttonId: `quotesanime`, buttonText: {displayText: '➡️التالي➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
@@ -7966,8 +7966,8 @@ break
 texttk = `Wanna download no watermark or audio?
 _Please choose the button below_`
 let buttons = [
-{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
-{buttonId: `ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
+{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'بدون علامه مائيه ❌'}, type: 1},
+{buttonId: `ttaud ${q}`, buttonText: {displayText: 'صوتي 🎶'}, type: 1}
 ]
 let buttonMessage = {
 video: {url:xeontiktokop},
@@ -8024,8 +8024,8 @@ let search = await yts(text)
 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
 let ytvc = await hx.youtube(anu.url)
 let buttons = [
-{buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: '► فيديو'}, type: 1},
+{buttonId: `ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ صوتي'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
@@ -8070,8 +8070,8 @@ ${global.themeemoji} Quality : ${res.quality}
 
 _Select video or audio and wait a while_`
 let buttons = [
-{buttonId: `ytvd ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytad ${res.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `ytvd ${res.link}`, buttonText: {displayText: '► فيديو'}, type: 1},
+{buttonId: `ytad ${res.mp3}`, buttonText: {displayText: '♫ صوتي'}, type: 1}
 ]
 let buttonMessage = {
 image: {url:res.thumb},
@@ -8161,7 +8161,7 @@ try {
 hx.pinterest(args.join(" ")).then(async(res) => {
 imgnyee = res[Math.floor(Math.random() * res.length)]
 let buttons = [
-{buttonId: `pinterest ${args.join(" ")}`, buttonText: {displayText: 'Next Image 👀'}, type: 1}
+{buttonId: `pinterest ${args.join(" ")}`, buttonText: {displayText: 'الصوره التاليه 👀'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: imgnyee },
@@ -8210,8 +8210,8 @@ break
 		let anu = await umma(isUrl(text)[0])
 		if (anu.type == 'video') {
 		    let buttons = [
-                        {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '🎵Audio🎵'}, type: 1},
-                        {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                        {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '🎵صوتي🎵'}, type: 1},
+                        {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '📽️فيديو📽️'}, type: 1}
                     ]
 		    let buttonMessage = {
 		        image: { url: anu.author.profilePic },
@@ -8440,7 +8440,7 @@ View List Of Messages With ${prefix}listmsg`)
                 if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
 				this.anonymous = this.anonymous ? this.anonymous : {}
 				let buttons = [
-                    { buttonId: 'Start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
+                    { buttonId: 'Start', buttonText: { displayText: '🚶بدء🚶' }, type: 1 }
                 ]
                 XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await XeonBotInc.getName(m.sender)} Welcome To Anonymous Chat\n\nClick The Button Below To Find A Partner\`\`\``, XeonBotInc.user.name, m)
             }
@@ -8453,7 +8453,7 @@ View List Of Messages With ${prefix}listmsg`)
                 let room = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!room) {
                     let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
+                        { buttonId: 'start', buttonText: { displayText: '🚶بدء🚶' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner \`\`\``)
                    reply(false)
@@ -8471,7 +8471,7 @@ View List Of Messages With ${prefix}listmsg`)
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
                     let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
+                        { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Still In An Anonymous Session, Press The Button Below To Terminate Your Anonymous Session\`\`\``, XeonBotInc.user.name, m)
                     reply(false)
@@ -8479,8 +8479,8 @@ View List Of Messages With ${prefix}listmsg`)
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
                     let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: '⏩Skip⏩' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
+                        { buttonId: 'next', buttonText: { displayText: '⏩تخطي⏩' }, type: 1 },
+                        { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
                     room.b = m.sender
@@ -8501,7 +8501,7 @@ View List Of Messages With ${prefix}listmsg`)
                         },
                     }
                     let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
+                        { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, XeonBotInc.user.name, m)
                 }
@@ -8515,7 +8515,7 @@ View List Of Messages With ${prefix}listmsg`)
                 let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!romeo) {
                     let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
+                        { buttonId: 'start', buttonText: { displayText: '🚶بدء🚶' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner\`\`\``)
                     reply(false)
@@ -8526,8 +8526,8 @@ View List Of Messages With ${prefix}listmsg`)
                 let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
                 if (room) {
                     let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: '⏩Skip⏩' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
+                        { buttonId: 'next', buttonText: { displayText: '⏩تخطي⏩' }, type: 1 },
+                        { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, XeonBotInc.user.name, m)
                     room.b = m.sender
@@ -8548,13 +8548,13 @@ View List Of Messages With ${prefix}listmsg`)
                         },
                     }
                     let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
+                        { buttonId: 'keluar', buttonText: { displayText: '🛑ايقاف🛑' }, type: 1 }
                     ]
                     await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, XeonBotInc.user.name, m)
                 }
                 break
             }
-            case 'public': {
+            case 'عام': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
@@ -8562,7 +8562,7 @@ View List Of Messages With ${prefix}listmsg`)
                 reply('Successful Change To Public Usage')
             }
             break
-            case 'self': {
+            case 'خاص': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
@@ -8752,7 +8752,7 @@ case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case '
 if (isBanChat) return reply(mess.banChat)
 teks = `*「 ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\nDont forget to donate 🍜`
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu 🌺'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: 'القائمه 🌺'}, type: 1}
 ]
 let buttonMessage = {
 image: thum,
@@ -8779,27 +8779,27 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 	                let btn = [{
                                 urlButton: {
-                                    displayText: 'YouTube 🍒',
+                                    displayText: 'شاتي 🍒',
                                     url: `${websitex}`
                                 }
                             }, {
                                 callButton: {
-                                    displayText: 'Script 🍜',
+                                    displayText: 'سكربت ❤',
                                     url: `${botscript}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'All Menu 🍱',
+                                    displayText: 'كل القائمه 💗',
                                     id: 'allmenu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'List Menu 🍢',
+                                    displayText: 'قائمه الخيارات 🖤',
                                     id: 'command'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner 🤣',
+                                    displayText: 'المطور💜',
                                     id: 'owner'
                                 }
                             }]
@@ -8816,11 +8816,11 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
-            { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
-            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
-            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
-            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
+        	{ urlButton: { displayText: `شاتي 🍒`, url : `${websitex}` } },
+            { urlButton: { displayText: `سكربت ❤`, url: `${botscript}` } },
+            { quickReplyButton: { displayText: `كل القائمه 💗`, id: 'allmenu'} },
+            { quickReplyButton: { displayText: `قائمه الخيارات 🖤)`, id: 'command'} },
+            { quickReplyButton: { displayText: `المطور💜`, id: 'owner'} }
         	]
         	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
@@ -8837,131 +8837,131 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     footerText: `${global.botname}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "Initial Features Of Bot 🦄",
+								"title": "الميزات الأولية للبوت 🦄",
 								"rows": [
 									{
-										"title": "Other ☕",
-										"description": "Displays The List Of Other Features",
+										"title": "اخر ☕",
+										"description": "يعرض قائمة الميزات الأخرى",
 										"rowId": `${prefix}othermenu`
 									}
 								]
 							},
 							{
-								"title": "Bot Features ❤️",
+								"title": "Bot سمات ❤️",
 								"rows": [
 									{
-										"title": "All Menu 🥀",
-										"description": "Displays The List Of All The Features!",
+										"title": "كل القائمه 🥀",
+										"description": "يعرض قائمة بجميع الميزات!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "Owner Menu 💠",
-										"description": "Displays The List Of Owner Features",
+										"title": "قائمه المالك 💠",
+										"description": "يعرض قائمة ميزات المالك",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "Group Menu ✨",
-										"description": "Displays The List Of Main Features",
+										"title": "قائمه الجروبات ✨",
+										"description": "يعرض قائمة الميزات الرئيسية",
 										"rowId": `${prefix}groupmenu`
 										},
 										{
-										"title": "Maker Menu 🌈",
-										"description": "Displays The List Of Logo Making Features",
+										"title": "قائمه تصميم لوجو 🌈",
+										"description": "يعرض قائمة ميزات صنع الشعار",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Sound Menu 🎵",
-										"description": "Displays The List Of Sound Features",
+										"title": "قائمه الصوتيات 🎵",
+										"description": "يعرض قائمة ميزات صنع الصوتيات",
 										"rowId": `${prefix}soundmenu`
 									},
 									{
-										"title": "Download Menu ↘️",
-										"description": "Displays The List Of Download Features",
+										"title": "قائمه التحميل ↘️",
+										"description": "يعرض قائمة ميزات التنزيل",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "Sticker Menu 🃏",
-										"description": "Displays The List Of Sticker Features",
+										"title": "قائمه الاستيكر 🃏",
+										"description": "يعرض قائمة ميزات الاستيكر",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Search Menu 🔎",
-										"description": "Displays The List Of Searching Features",
+										"title": "قائمه البحث 🔎",
+										"description": "يعرض قائمة ميزات البحث",
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-										"title": "Tool Menu ⚙️",
-										"description": "Displays The List Of Tool Features",
+										"title": "قائمه ادوات ⚙️",
+										"description": "يعرض قائمة ميزات الأداة",
 										"rowId": `${prefix}toolmenu`
 									},
 									{
-										"title": "Random Image Menu 🌆",
-										"description": "Displays The List Of Random Image Features",
+										"title": "قائمة الصور العشوائية 🌆",
+										"description": "يعرض قائمة ميزات الصورة العشوائية",
 										"rowId": `${prefix}randomimagemenu`
 									},
 									{
-										"title": "Image Effect Menu 🖼️",
-										"description": "Displays The List Of Image Effect Features",
+										"title": "قائمة تأثير الصورة 🖼️",
+										"description": "يعرض قائمة ميزات تأثير الصورة",
 										"rowId": `${prefix}imageeffectmenu`
 									},
 										{
-											"title": "Anime Menu 😘",
-										"description": "Displays The List Of Random Anime Features",
+											"title": "قائمه انمي عشوائي 😘",
+										"description": "يعرض قائمة ميزات الأنمي العشوائية",
 										"rowId": `${prefix}animemenu`
 										},
 										{
-											"title": "Emote Menu 😀",
-										"description": "Displays The List Of Emote Features",
+											"title": "قائمة الرقص 😀",
+										"description": "يعرض قائمة ميزات التعبيرات",
 										"rowId": `${prefix}emotemenu`
 										},
 										{
-										"title": "Anime Sticker Menu ☺️",
-										"description": "Displays The List Of Anime Sticker Features",
+										"title": "قائمه استيكرات انمي ☺️",
+										"description": "يعرض قائمة ميزات ملصقات الرسوم المتحركة",
 										"rowId": `${prefix}animestickermenu`
 									     },
 									{
-										"title": "Nsfw Menu 🤓",
-										"description": "Displays The List Of Nsfe Features",
+										"title": "قائمة Nsfw 🤓",
+										"description": "يعرض قائمة ميزات Nsfe",
 										"rowId": `${prefix}nsfwmenu`
 									     },
 										{
-											"title": "Fun Menu 🕺",
-										"description": "Displays The List Of Fun Features",
+											"title": "قائمه المرح 🕺",
+										"description": "يعرض قائمة الميزات الممتعة",
 										"rowId": `${prefix}funmenu`
 										},
 										{
-										"title": "Game Menu 🎮",
-										"description": "Displays The List Of Game Features",
+										"title": "قائمه الالعاب 🎮",
+										"description": "يعرض قائمة ميزات اللعبة",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "Convert Menu ⚒️",
-										"description": "Displays The List Of Convert Features",
+											"title": "قائمه التحويل ⚒️",
+										"description": "يعرض قائمة ميزات التحويل",
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "Database Menu ♻️",
-										"description": "Displays The List Of Database Features",
+											"title": "قائمه قاعده البيانات ♻️",
+										"description": "يعرض قائمة ميزات قاعدة البيانات",
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-										"title": "Indo Menu  🦜",
-										"description": "Displays The List Of Indo Features",
+										"title": "قائمه هنديه  🦜",
+										"description": "يعرض قائمة الميزات الهندية",
 										"rowId": `${prefix}indomenu`
 									},
 										{
-											"title": "Horoscope Menu 🕊️",
-										"description": "Displays The List Of Horoscope Features",
+											"title": "قائمة الأبراج 🕊️",
+										"description": "يعرض قائمة ميزات الأبراج",
 										"rowId": `${prefix}indohoroscopemenu`
 										}
 								]
 							},
 							{
-								"title": "Chat With Fellow Users 🌝",
+								"title": "الدردشة مع زملائك المستخدمين 🌝",
 								"rows": [
 									{
-										"title": "Anonymous Chat Menu 🙎🏻‍♂️",
-										"description": "Displays The List Of Anonymous Chat Features",
+										"title": "قائمة الدردشة المجهولة 🙎🏻‍♂️",
+										"description": "يعرض قائمة ميزات الدردشة المجهولة",
 										"rowId": `${prefix}anonymousmenu`
 									}
 								]
@@ -8970,8 +8970,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Credit ©️",
 								"rows": [
 									{
-										"title": "Thanks To ❤️",
-										"description": "Displays The List Of Credit Of The Bot !!",
+										"title": "شكرا لك ❤️",
+										"description": "يعرض قائمة ائتمان البوت !!",
 										"rowId": `${prefix}tqtt`
 									}
 								]
@@ -8987,9 +8987,9 @@ case 'allmenu':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'All Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」	
-╠ ${prefix}self
-╠ ${prefix}public
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 اسكوديا المطور 」	
+╠ ${prefix}خاص
+╠ ${prefix}عام
 ╠ ${prefix}antitag
 ╠ ${prefix}rentbot [add/del]
 ╠ ${prefix}rentlist
@@ -9006,23 +9006,23 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}bcloc [text]
 ╠ ${prefix}setppbot [image]
 ╠ ${prefix}setexif
-╠ ${prefix}block [tag/number]
-╠ ${prefix}unblock [tag/number]
+╠ ${prefix}بلوك [tag/number]
+╠ ${prefix}فك بلوك [tag/number]
 ╠ ${prefix}coowner [add/del]
-╠═══════✪「 GROUP 」	        
+╠═══════✪「 قائمه جروب 」	        
 ╠${prefix}grousetting
-╠${prefix}grouplink
+╠${prefix}لينك
 ╠${prefix}ephemeral [option]
 ╠${prefix}setgcpp [image]
 ╠${prefix}setname [text]
 ╠${prefix}setdesc [text]
 ╠${prefix}group 
 ╠${prefix}resetgrouplink
-╠${prefix}editinfo [option]
-╠${prefix}add [user]
-╠${prefix}kick [reply/tag]
+╠${prefix}تعديل [option]
+╠${prefix}اضافه [user]
+╠${prefix}طرد [reply/tag]
 ╠${prefix}hidetag [text]
-╠${prefix}tagall [text]
+╠${prefix}تاك [text]
 ╠${prefix}antilinkgc [on/off]
 ╠${prefix}antilinktg [on/off]
 ╠${prefix}antilinktt [on/off]
@@ -9031,21 +9031,21 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}antilinkig [on/off]
 ╠${prefix}antilinkfb [on/off]
 ╠${prefix}antilinktwit [on/off]
-╠${prefix}antilinkall [on/off]
+╠${prefix}الروابط [on/off]
 ╠${prefix}antivirus [on/off]
 ╠${prefix}antitoxic [on/off]
 ╠${prefix}antiwame [on/off]
 ╠${prefix}autoreply [on/off]
 ╠${prefix}nsfw [on/off]
-╠${prefix}promote [reply/tag]
-╠${prefix}demote [reply/tag]
+╠${prefix}رفع [reply/tag]
+╠${prefix}تنزيل [reply/tag]
 ╠${prefix}react [reply emoji]
 ╠${prefix}vote
 ╠${prefix}devote
 ╠${prefix}upvote
 ╠${prefix}checkvote
 ╠${prefix}delvote
-╠═══════✪「 MAKER 」
+╠═══════✪「 قائمه عمل لوجو 」
 ╠${prefix}candy
 ╠${prefix}blackpinkneon
 ╠${prefix}deepsea
@@ -9149,7 +9149,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}halloween
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
-╠═════✪「 DOWNLOAD 」	
+╠═════✪「 قائمه تنزيل 」	
 ╠${prefix}instagram [url]
 ╠${prefix}igtv [url]
 ╠${prefix}igstory [username]
@@ -9168,7 +9168,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}gitclone [repo link]
 ╠${prefix}soundcloud [url]
 ╠${prefix}zippyshare [url]
-╠═══════✪「 SEARCH 」	
+╠═══════✪「 قائمه البحث 」	
 ╠${prefix}play [query]
 ╠${prefix}song [query]
 ╠${prefix}yts [query]
@@ -9195,14 +9195,14 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}wattpad [query]
 ╠ ${prefix}mcserver [ip|port]
 ╠ ${prefix}drakor [query]
-╠═══════✪「 CONVERT 」
+╠═══════✪「 قائمه تحويل 」
 ╠ ${prefix}toimage [reply stick]
 ╠ ${prefix}sticker [reply img|gif]
-╠ ${prefix}take [reply img|gif|stik]
+╠ ${prefix}سرقه [reply img|gif|stik]
 ╠ ${prefix}smeme [reply img]
 ╠ ${prefix}emoji [emoji]
 ╠ ${prefix}tovideo [reply img]
-╠ ${prefix}togif [reply stick]
+╠ ${prefix}متحركه [reply stick]
 ╠ ${prefix}tourl [reply img]
 ╠ ${prefix}tovn [reply aud]
 ╠ ${prefix}tomp3 [reply vn]
@@ -9224,7 +9224,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}robot [reply aud]
 ╠${prefix}slow [reply aud]
 ╠${prefix}squirrel [reply aud]
-╠═══════✪「 IMG EFFECT 」
+╠═══════✪「 قائمه صور افتكات 」
 ╠${prefix}wanted
 ╠${prefix}blur
 ╠${prefix}framed
@@ -9239,7 +9239,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}beautifuleffect
 ╠${prefix}deleteeffect
 ╠${prefix}pixelate
-╠═══════✪「 RANDOM IMG 」
+╠═══════✪「 قائمه صور عشوائيه 」
 ╠${prefix}coffee
 ╠${prefix}bts
 ╠${prefix}woof
@@ -9252,7 +9252,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}wallcode
 ╠${prefix}animewall [query]
 ╠${prefix}animewall2 [query]
-╠═══════✪「 EMOTE 」
+╠═══════✪「 قائمه EMOTE 」
 ╠${prefix}instagramemoji
 ╠${prefix}facebookemoji
 ╠${prefix}iphoneemoji
@@ -9265,7 +9265,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}googleemoji
 ╠${prefix}pediaemoji
 ╠${prefix}microsoftemoji
-╠═══════✪「 ANIME 」
+╠═══════✪「 قائمه صور انمي 」
 ╠${prefix}naruto
 ╠${prefix}yaoi
 ╠${prefix}neko2
@@ -9314,7 +9314,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}animemegumin
 ╠${prefix}smug2
 ╠${prefix}couplepp
-╠══════✪「 STICKER 」
+╠══════✪「 قائمه استيكرز 」
 ╠ ${prefix}patrick
 ╠ ${prefix}emoji
 ╠ ${prefix}emojimix
@@ -9322,7 +9322,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}ttp
 ╠ ${prefix}doge
 ╠ ${prefix}lovesticker
-╠════✪「 ANIME STICKER 」
+╠════✪「 قائمه استيكر انمي 」
 ╠${prefix}loli
 ╠${prefix}bully
 ╠${prefix}cuddle
@@ -9352,7 +9352,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}cringe
 ╠${prefix}neko
 ╠${prefix}gura
-╠═══════✪「 NSFW 」
+╠═══════✪「 قائمه انمي اباحي 」
 ╠${prefix}hentaivideo
 ╠${prefix}yuri
 ╠${prefix}masturbation
@@ -9378,7 +9378,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}spank
 ╠${prefix}hneko
 ╠${prefix}nwaifu
-╠═══════✪「 FUN 」
+╠═══════✪「 قائمه المرح 」
 ╠ ${prefix}how [text
 ╠ ${prefix}when [text]
 ╠ ${prefix}where [text]
@@ -9443,7 +9443,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}playboy
 ╠ ${prefix}fuckgirl
 ╠ ${prefix}playgirl
-╠══════✪「 SOUND 」
+╠══════✪「 قائمه صوت 」
 ╠ ${prefix}sound1
 ╠ ${prefix}sound2
 ╠ ${prefix}sound3
@@ -9605,7 +9605,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}sound159
 ╠ ${prefix}sound160
 ╠ ${prefix}sound161
-╠══════✪「 GAME 」
+╠══════✪「 قائمه الالعاب 」
 ╠ ${prefix}truth
 ╠ ${prefix}dare
 ╠ ${prefix}tictactoe
@@ -9613,16 +9613,16 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}guess [option]
 ╠ ${prefix}math [mode]
 ╠ ${prefix}suitpvp [tag]
-╠══✪「 ANONYMOUS CHAT 」
+╠══✪「 قائمه محادثة مجهوله 」
 ╠${prefix}anonymous
 ╠${prefix}start
 ╠${prefix}next
 ╠${prefix}leave
-╠══════✪「 TOOL 」
+╠══════✪「 قائمه أداة 」
 ╠ ${prefix}translate [text]
 ╠ ${prefix}fliptext [text]
 ╠ ${prefix}toletter [number]
-╠══════✪「 DATABASE 」
+╠══════✪「 قائمه قاعدة البيانات 」
 ╠ ${prefix}setcmd
 ╠ ${prefix}listcmd
 ╠ ${prefix}delcmd
@@ -9631,7 +9631,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠ ${prefix}listmsg
 ╠ ${prefix}getmsg
 ╠ ${prefix}delmsg
-╠══════✪「 lNDO 」
+╠══════✪「 قائمه هنديه 」
 ╠ ${prefix}darkjoke
 ╠ ${prefix}quotes
 ╠ ${prefix}animequotes
@@ -9656,7 +9656,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}covidindo
 ╠${prefix}earthquake
 ╠${prefix}tvschedule
-╠══════✪「 INDO HSCOPE 」
+╠══════✪「 قائمه ابراج الهند 」
 ╠${prefix}nomorhoki
 ╠${prefix}artimimpi 
 ╠${prefix}artinama 
@@ -9687,7 +9687,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」
 ╠${prefix}masasubur
 ╠${prefix}zodiak
 ╠${prefix}shio
-╠══════✪「 OTHER 」
+╠══════✪「 قائمه المالك 」
 ╠ ${prefix}afk
 ╠ ${prefix}readmore [text]
 ╠ ${prefix}toviewonce
@@ -9713,16 +9713,16 @@ case 'ownermenu':
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Owner Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 OWNER 」	
-╠ ${prefix}self
-╠ ${prefix}public
+╠ ${prefix}خاص
+╠ ${prefix}عام
 ╠ ${prefix}antitag
 ╠ ${prefix}ban [add/del]
 ╠ ${prefix}banchat [on/off]
 ╠ ${prefix}join [link]
 ╠ ${prefix}leavegc
 ╠ ${prefix}setbio
-╠ ${prefix}block [user]
-╠ ${prefix}unblock [user]
+╠ ${prefix}بلوك [user]
+╠ ${prefix}فك بلوك [user]
 ╠ ${prefix}bcgroup [text]
 ╠ ${prefix}bcall [text]
 ╠ ${prefix}bcimage [image]
@@ -9739,7 +9739,7 @@ case 'groupmenu':
 var unicorn = await getBuffer(picak+'Group Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 GROUP 」	
 ╠${prefix}groupsetting
-╠${prefix}grouplink
+╠${prefix}لينك
 ╠${prefix}ephemeral [option]
 ╠${prefix}setgcpp [image]
 ╠${prefix}setname [text]
@@ -9747,11 +9747,11 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 GROUP 」
 ╠${prefix}group
 ╠${prefix}botgroups
 ╠${prefix}resetgrouplink
-╠${prefix}editinfo [option]
-╠${prefix}add [user]
-╠${prefix}kick [reply/tag]
+╠${prefix}تعديل [option]
+╠${prefix}اضافه [user]
+╠${prefix}طرد [reply/tag]
 ╠${prefix}hidetag [text]
-╠${prefix}tagall [text]
+╠${prefix}تاك [text]
 ╠${prefix}autosticker [on/off]
 ╠${prefix}autostickerpc [on/off]
 ╠${prefix}leveling [on/off]
@@ -9763,13 +9763,13 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 GROUP 」
 ╠${prefix}antilinkig [on/off]
 ╠${prefix}antilinkfb [on/off]
 ╠${prefix}antilinktwit [on/off]
-╠${prefix}antilinkall [on/off]
+╠${prefix}الروابط [on/off]
 ╠${prefix}antivirus [on/off]
 ╠${prefix}antitoxic [on/off]
 ╠${prefix}antiwame [on/off]
 ╠${prefix}nsfw [on/off]
-╠${prefix}promote [reply/tag]
-╠${prefix}demote [reply/tag]
+╠${prefix}رفع [reply/tag]
+╠${prefix}تنزيل [reply/tag]
 ╠${prefix}react [reply emoji]
 ╠${prefix}getpp [reply user]
 ╠${prefix}vote
@@ -9977,11 +9977,11 @@ var unicorn = await getBuffer(picak+'Convert Menu')
 await XeonBotInc.send5ButImg(from, `╔═══════✪「 CONVERT 」	
 ╠ ${prefix}toimage [reply stick]
 ╠ ${prefix}sticker [reply img|gif]
-╠ ${prefix}take [reply img|gif|stik]
+╠ ${prefix}سرقه [reply img|gif|stik]
 ╠ ${prefix}smeme [reply img]
 ╠ ${prefix}emoji [emoji]
 ╠ ${prefix}tovideo [reply img]
-╠ ${prefix}togif [reply stick]
+╠ ${prefix}متحركه [reply stick]
 ╠ ${prefix}tourl [reply img]
 ╠ ${prefix}tovn [reply aud]
 ╠ ${prefix}tomp3 [reply vn]
