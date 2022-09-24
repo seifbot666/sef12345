@@ -2403,7 +2403,7 @@ let teks = `╚»˙·٠•●♥ تاك للكل ♥●•٠·˙«╝
                 XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break
-                case 'hidetag': {
+                case 'خفي': {
                 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
@@ -8837,12 +8837,12 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     footerText: `${global.botname}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "الميزات الأولية للبوت 🦄",
+								"title": "الميزات الأولية للبوت 🖤",
 								"rows": [
 									{
-										"title": "اخر ☕",
-										"description": "يعرض قائمة الميزات الأخرى",
-										"rowId": `${prefix}othermenu`
+										"title": "حاجات تانيه 💕😂",
+										"description": "يعرض قايمه الشتايم ينجس😂",
+										"rowId": `${prefix}الشتايم`
 									}
 								]
 							},
@@ -9021,7 +9021,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 اسكودي�
 ╠${prefix}تعديل [option]
 ╠${prefix}اضافه [user]
 ╠${prefix}طرد [reply/tag]
-╠${prefix}hidetag [text]
+╠${prefix}خفي [text]
 ╠${prefix}تاك [text]
 ╠${prefix}antilinkgc [on/off]
 ╠${prefix}antilinktg [on/off]
@@ -9750,7 +9750,7 @@ await XeonBotInc.send5ButImg(from, `╔═══════✪「 GROUP 」
 ╠${prefix}تعديل [option]
 ╠${prefix}اضافه [user]
 ╠${prefix}طرد [reply/tag]
-╠${prefix}hidetag [text]
+╠${prefix}خفي [text]
 ╠${prefix}تاك [text]
 ╠${prefix}autosticker [on/off]
 ╠${prefix}autostickerpc [on/off]
@@ -10558,29 +10558,29 @@ await XeonBotInc.send5ButImg(from, `╔═✪「 INDO HOROSCOPE 」
 ╠${prefix}shio
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
-case 'othermenu':
+case 'الشتايم':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'Other Menu')
-await XeonBotInc.send5ButImg(from, `╔═══════✪「 OTHER 」	
-╠ ${prefix}afk
-╠ ${prefix}readmore [text]
-╠ ${prefix}toviewonce
-╠ ${prefix}chatinfo
-╠ ${prefix}alive
-╠ ${prefix}script
-╠ ${prefix}speedtest
-╠ ${prefix}ping
-╠ ${prefix}owner
-╠ ${prefix}menu
-╠ ${prefix}delete
-╠ ${prefix}chatinfo
-╠ ${prefix}quoted
-╠ ${prefix}listpc
-╠ ${prefix}listgc
-╠ ${prefix}donate
-╠ ${prefix}request
-╠ ${prefix}report [bug]
+await XeonBotInc.send5ButImg(from, `╔═══════✪「 الشتايم  」	
+╠ ${prefix}كسمك
+╠ ${prefix}بوت خرا
+╠ ${prefix}متيجي
+╠ ${prefix}اقلع
+╠ ${prefix}مص
+╠ ${prefix}اتف
+╠ ${prefix}اشخر
+╠ ${prefix}نيكو
+╠ ${prefix}بعبصو
+╠ ${prefix}ارقص
+╠ ${prefix}كسم تقدير
+╠ ${prefix}اضرب عشره
+╠ ${prefix}يبن متناكه
+╠ ${prefix}يمعرص
+╠ ${prefix}يعني اي
+╠ ${prefix}انت مين
+╠ ${prefix}هنيكك
+╠ ${prefix}بوسه
 ╚═════════════✪` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Donate 🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
 break
 case 'tqtt': 
